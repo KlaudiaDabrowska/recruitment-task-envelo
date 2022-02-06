@@ -1,0 +1,51 @@
+@use 'mixin';
+@use 'variables';
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 2fr;
+  gap: 15px 120px;
+  width: 80%;
+  grid-template-areas:
+    'label label2'
+    'input input2'
+    'phone code'
+    'submit submit';
+
+  .first-label {
+    grid-area: label;
+    color: black;
+    font-size: 26px;
+  }
+
+  .first-input {
+    grid-area: input;
+  }
+
+  .second-label {
+    grid-area: label2;
+    color: black;
+    font-size: 26px;
+  }
+
+  .second-input {
+    grid-area: input2;
+  }
+
+  .first-submit {
+    grid-area: submit;
+  }
+
+  .phone-error {
+    grid-area: phone;
+    color: rgb(189, 59, 59);
+    font-weight: bold;
+  }
+
+  .code-error {
+    grid-area: code;
+    color: rgb(189, 59, 59);
+    font-weight: bold;
+  }
+}

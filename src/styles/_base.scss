@@ -1,0 +1,11 @@
+@use 'variables';
+@use 'mixin';
+
+body {
+  display: flex;
+  @include mixin.justify;
+  @include mixin.fonts;
+  height: 100vh;
+  background-color: variables.$bgc-color;
+  color: variables.$bgc-color;
+}

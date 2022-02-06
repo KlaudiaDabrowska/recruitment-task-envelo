@@ -1,0 +1,15 @@
+@use 'mixin';
+@use 'variables';
+
+.wrapper {
+  display: flex;
+  //   @include mixin.justify;
+  align-items: center;
+  //   justify-content: space-around;
+  background-color: variables.$wrapper-color;
+  flex-direction: column;
+  width: 55vw;
+  //   width: 800px;
+  height: 70vh;
+  //   height: 700px;
+}

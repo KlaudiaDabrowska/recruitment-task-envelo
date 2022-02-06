@@ -1,0 +1,12 @@
+@use 'variables';
+
+.description-wrapper {
+  margin-bottom: 70px;
+
+  .description {
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
