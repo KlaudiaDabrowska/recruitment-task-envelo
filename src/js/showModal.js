@@ -1,4 +1,4 @@
-export const submitBtn = document.querySelector('.first-submit')
+export const submitBtn = document.querySelector('.second-submit')
 const modal = document.querySelector('.modal')
 const loader = document.querySelector('.loader')
 

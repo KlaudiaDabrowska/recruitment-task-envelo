@@ -1,26 +1,30 @@
 @mixin breakpoint($point) {
-  @if $point == desktop {
-    @media (max-width: 1370px) and (min-width: 1240px) {
+  @if $point == xxl {
+    @media (max-width: 1140px) {
       @content;
     }
-  } @else if $point == laptop {
-    @media (max-width: 1240px) and (min-width: 1024px) {
+  } @else if $point == xl {
+    @media (max-width: 950px) {
       @content;
     }
-  } @else if $point == tablet {
-    @media (max-width: 1024px) and (min-width: 768px) {
+  } @else if $point == lg {
+    @media (max-width: 852px) {
       @content;
     }
-  } @else if $point == tabletandmobile {
-    @media (max-width: 1024px) {
+  } @else if $point == md {
+    @media (max-width: 700px) {
       @content;
     }
-  } @else if $point == mobile {
-    @media (max-width: 768px) and (min-width: 400px) {
+  } @else if $point == sm {
+    @media (max-width: 540px) {
       @content;
     }
-  } @else if $point == smallermobile {
-    @media (max-width: 400px) {
+  } @else if $point == xs {
+    @media (max-width: 414px) {
+      @content;
+    }
+  } @else if $point == xxs {
+    @media (max-width: 375px) {
       @content;
     }
   }
