@@ -1,6 +1,6 @@
 export const phoneNumberInput = document.querySelector('.first-input')
 const codeInput = document.querySelector('.second-input')
-const submitBtn = document.querySelector('.first-submit')
+const submitBtn = document.querySelector('.second-submit')
 const phoneError = document.querySelector('.phone-error')
 const codeError = document.querySelector('.code-error')
 

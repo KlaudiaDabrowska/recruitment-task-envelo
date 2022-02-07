@@ -4,8 +4,17 @@
 .wrapper {
   display: flex;
   align-items: center;
-  background-color: variables.$wrapper-color;
   flex-direction: column;
   width: 55vw;
   height: 700px;
+  background-color: variables.$wrapper-color;
+
+  @media (max-width: 700px) {
+    width: 80vw;
+    height: 600px;
+  }
+  @media (max-width: 540px) {
+    width: 80vw;
+    height: 500px;
+  }
 }

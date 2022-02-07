@@ -1,3 +1,6 @@
+@use 'breakpoints';
+@use 'variables';
+
 .loader {
   display: none;
   position: absolute;
@@ -7,10 +10,22 @@
   width: 120px;
   height: 120px;
   margin: -76px 0 0 -76px;
-  border: 16px solid #f3f3f3;
+  border: 16px solid variables.$loader-border-color;
   border-radius: 50%;
-  border-top: 16px solid rgb(230, 117, 117);
+  border-top: 16px solid variables.$submit-color;
   animation: spin 2s linear infinite;
+  @include breakpoints.breakpoint(lg) {
+    left: 52%;
+    top: 53%;
+    width: 110px;
+    height: 110px;
+  }
+  @include breakpoints.breakpoint(xxs) {
+    left: 56%;
+    top: 55%;
+    width: 90px;
+    height: 90px;
+  }
 }
 
 @keyframes spin {

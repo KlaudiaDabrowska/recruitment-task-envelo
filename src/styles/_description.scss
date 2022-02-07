@@ -1,12 +1,19 @@
 @use 'variables';
+@use 'breakpoints';
 
 .description-wrapper {
   margin-bottom: 70px;
+  @include breakpoints.breakpoint(sm) {
+    margin-bottom: 40px;
+  }
 
   .description {
-    color: black;
+    color: variables.$black-color;
     text-align: center;
     font-weight: bold;
     font-size: 20px;
+    @include breakpoints.breakpoint(sm) {
+      font-size: 15px;
+    }
   }
 }

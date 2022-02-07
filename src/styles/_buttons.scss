@@ -1,17 +1,30 @@
 @use 'variables';
+@use 'breakpoints';
 
 .first-submit,
 .second-submit {
   grid-area: button;
   width: 35%;
+  height: 110px;
   justify-self: center;
   background-color: variables.$submit-color;
   border-radius: 10px;
-  height: 110px;
   font-size: 28px;
   cursor: pointer;
+}
 
-  // &:hover {
-  //   background-color: variables.$hover-submit-color;
-  // }
+.first-submit {
+  margin-top: 50px;
+  @include breakpoints.breakpoint(xxl) {
+    font-size: 23px;
+  }
+  @include breakpoints.breakpoint(lg) {
+    width: 45%;
+  }
+  @include breakpoints.breakpoint(sm) {
+    width: 60%;
+    height: 10%;
+    font-size: 20px;
+    margin-top: 80px;
+  }
 }

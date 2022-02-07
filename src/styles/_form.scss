@@ -1,5 +1,6 @@
 @use 'mixin';
 @use 'variables';
+@use 'breakpoints';
 
 .form {
   display: grid;
@@ -13,44 +14,134 @@
     'input input2'
     'phone code'
     'submit submit';
+  @include breakpoints.breakpoint(xxl) {
+    gap: 15px 80px;
+  }
+  @include breakpoints.breakpoint(sm) {
+    gap: 10px 30px;
+  }
+  @include breakpoints.breakpoint(xs) {
+    gap: 7px 20px;
+  }
+  @include breakpoints.breakpoint(xxs) {
+    gap: 4px 15px;
+  }
 
   .first-label {
     grid-area: label;
-    color: black;
+    color: variables.$black-color;
     font-size: 26px;
+    @include breakpoints.breakpoint(xxl) {
+      font-size: 23px;
+    }
+    @include breakpoints.breakpoint(xl) {
+      font-size: 20px;
+    }
+    @include breakpoints.breakpoint(lg) {
+      font-size: 16px;
+    }
+    @include breakpoints.breakpoint(xxs) {
+      font-size: 13px;
+    }
   }
 
   .first-input {
     grid-area: input;
+    @include breakpoints.breakpoint(xxl) {
+      width: 100%;
+    }
+    @include breakpoints.breakpoint(xs) {
+      height: 70%;
+    }
+    @include breakpoints.breakpoint(xxs) {
+      height: 80%;
+    }
   }
 
   .second-label {
     grid-area: label2;
-    color: black;
+    color: variables.$black-color;
     font-size: 26px;
+    @include breakpoints.breakpoint(xxl) {
+      font-size: 23px;
+    }
+    @include breakpoints.breakpoint(xl) {
+      font-size: 20px;
+    }
+    @include breakpoints.breakpoint(lg) {
+      font-size: 16px;
+    }
+    @include breakpoints.breakpoint(xxs) {
+      font-size: 13px;
+    }
   }
 
   .second-input {
     grid-area: input2;
+    @include breakpoints.breakpoint(xxl) {
+      width: 100%;
+    }
+    @include breakpoints.breakpoint(xs) {
+      height: 70%;
+    }
+    @include breakpoints.breakpoint(xxs) {
+      height: 80%;
+    }
   }
 
-  .first-submit {
+  .second-submit {
     grid-area: submit;
+    @include breakpoints.breakpoint(xxl) {
+      width: 50%;
+      font-size: 24px;
+    }
+    @include breakpoints.breakpoint(lg) {
+      width: 50%;
+      height: 80%;
+    }
+    @include breakpoints.breakpoint(xs) {
+      width: 75%;
+      height: 55%;
+      font-size: 20px;
+    }
   }
 
   .phone-error {
     grid-area: phone;
-    color: rgb(189, 59, 59);
-    font-weight: bold;
   }
 
   .code-error {
     grid-area: code;
-    color: rgb(189, 59, 59);
+  }
+
+  .phone-error,
+  .code-error {
+    color: variables.$header-color;
     font-weight: bold;
+    @include breakpoints.breakpoint(lg) {
+      font-size: 15px;
+    }
+    @include breakpoints.breakpoint(sm) {
+      font-size: 13px;
+    }
+    @include breakpoints.breakpoint(xxs) {
+      font-size: 10px;
+    }
   }
 
   .required {
     font-size: 15px;
+    @include breakpoints.breakpoint(xxl) {
+      font-size: 23px;
+    }
+    @include breakpoints.breakpoint(xl) {
+      font-size: 20px;
+    }
+    @include breakpoints.breakpoint(lg) {
+      font-size: 14px;
+    }
+    @include breakpoints.breakpoint(xxs) {
+      font-size: 10px;
+    }
   }
 }
