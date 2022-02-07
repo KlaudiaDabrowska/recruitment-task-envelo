@@ -42,6 +42,12 @@ module.exports = {
       template: paths.src + '/template.html', // template file
       filename: 'index.html', // output file
     }),
+    new HtmlWebpackPlugin({
+      title: 'webpack Boilerplate',
+      favicon: paths.src + '/images/favicon.png',
+      template: paths.src + '/viewForm.html', // template file
+      filename: 'viewForm.html', // output file
+    }),
   ],
 
   // Determine how modules within the project are treated

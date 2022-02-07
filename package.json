@@ -9,7 +9,15 @@
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
     "lint": "eslint 'src/**/*.js' || true",
-    "prettify": "prettier --write 'src/**/*.js'"
+    "prettify": "prettier --write 'src/**/*.js'",
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
+  "globals": {
+    "window": {},
+    "document": {}
   },
   "keywords": [
     "webpack",
@@ -31,6 +39,7 @@
     "eslint-import-resolver-webpack": "^0.13.1",
     "eslint-plugin-prettier": "^4.0.0",
     "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.5.0",
     "mini-css-extract-plugin": "^2.4.2",
     "postcss-loader": "^6.2.0",
     "postcss-preset-env": "^6.7.0",
@@ -46,5 +55,8 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:taniarascia/webpack-boilerplate"
+  },
+  "dependencies": {
+    "jest-environment-jsdom": "^27.5.0"
   }
 }

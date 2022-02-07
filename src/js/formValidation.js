@@ -7,8 +7,16 @@ const codeError = document.querySelector('.code-error')
 const isPhoneValid = () => phoneNumberInput.value.length === 9
 const isPickupCodeValid = () => codeInput.value.length === 4
 
-const checkIsFormValid = () => {
+export const isFormValid = () => {
   if (isPhoneValid() && isPickupCodeValid()) {
+    return true
+  } else {
+    return false
+  }
+}
+
+const formValidatorListener = () => {
+  if (isFormValid()) {
     submitBtn.disabled = false
   } else {
     submitBtn.disabled = true
@@ -35,6 +43,6 @@ window.addEventListener('load', () => {
   submitBtn.disabled = true
 })
 phoneNumberInput.addEventListener('input', phoneOnChange)
-phoneNumberInput.addEventListener('input', checkIsFormValid)
+phoneNumberInput.addEventListener('input', formValidatorListener)
 codeInput.addEventListener('input', codeOnChange)
-codeInput.addEventListener('input', checkIsFormValid)
+codeInput.addEventListener('input', formValidatorListener)
