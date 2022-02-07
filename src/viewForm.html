@@ -5,18 +5,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>Envelo</title>
 </head>
 
 <body>
     <div class="wrapper">
-        <!-- <img src='../public/Envelo-logo.png'> -->
+
         <h1 class="header">ENVELO</h1>
         <div class="description-wrapper">
             <p class="description">Możesz mieć swoją przesyłkę w kilkanaście sekund.</p>
             <p class="description">Rozpocznij klikając w przycisk.</p>
         </div>
+
         <div class="loader"></div>
 
         <form class="form">
@@ -28,6 +28,7 @@
             <div class="code-error"></div>
             <button type="submit" class="second-submit">Odbierz paczkę </button>
         </form>
+
         <div class="modal">
             <h2 class="modal-header"> Paczka odebrana! </h2>
             <div class="modal-info">Zrobiłeś to w czasie 10 sekund! Czy możemy zrobić dla Ciebie coś jeszcze?</div>
@@ -35,13 +36,9 @@
                 <button class="modal-button1"> To wszystko na dziś</button>
                 <button class="modal-button2"> Odbierz kolejną paczkę</button>
             </div>
-
         </div>
 
-
     </div>
-    <!-- <div id="root"></div> -->
-
 </body>
 
 </html>

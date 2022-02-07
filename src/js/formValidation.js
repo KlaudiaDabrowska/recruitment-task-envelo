@@ -7,7 +7,7 @@ const codeError = document.querySelector('.code-error')
 const isPhoneValid = () => phoneNumberInput.value.length === 9
 const isPickupCodeValid = () => codeInput.value.length === 4
 
-export const isFormValid = () => {
+const isFormValid = () => {
   if (isPhoneValid() && isPickupCodeValid()) {
     return true
   } else {

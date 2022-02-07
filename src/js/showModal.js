@@ -2,7 +2,7 @@ export const submitBtn = document.querySelector('.second-submit')
 const modal = document.querySelector('.modal')
 const loader = document.querySelector('.loader')
 
-const showModal = () => {
+const showModalHideLoader = () => {
   modal.style.display = 'block'
   loader.style.display = 'none'
 }
@@ -10,5 +10,5 @@ const showModal = () => {
 submitBtn.addEventListener('click', (e) => {
   e.preventDefault()
   loader.style.display = 'block'
-  setTimeout(showModal, Math.floor(Math.random() * 1000 + 1))
+  setTimeout(showModalHideLoader, Math.floor(Math.random() * 1000 + 1))
 })
